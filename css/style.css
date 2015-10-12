@@ -44,9 +44,10 @@ input, textarea {
   -webkit-border-radius: 0;
   border-radius: 0;
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  max-width: 100%; }
 
-input[type="text"], textarea {
+input[type="text"], input[type="email"], textarea {
   width: 100%;
   display: block;
   margin-bottom: 1em;
@@ -774,7 +775,7 @@ body {
     body {
       font-size: 14px; } }
 
-.calibreL_small, input[type="text"], textarea, #distribucion .distribucion .list li a.open {
+.calibreL_small, input[type="text"], input[type="email"], textarea, #distribucion .distribucion .list li a.open {
   font-family: "calibre_light";
   font-size: 0.875em; }
 

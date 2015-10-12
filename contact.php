@@ -1,15 +1,16 @@
 <?php include 'header.php';?>
 
+
 <section class="contact bg_gray">
 	<div class="tag">contacto</div>
 
 	<div class="form">
 		<form>
-		<input type="text" placeholder="Nombre">
-		<input type="text" placeholder="Nombre">
-		<input type="text" placeholder="Nombre">
-		<textarea placeholder="Nombre"></textarea>
-		<input type="submit" value="Enviar">
+			<input type="text" placeholder="Nombre">
+			<input type="text" placeholder="Apellido">
+			<input type="email" placeholder="Correo">
+			<textarea placeholder="Nombre"></textarea>
+			<input type="submit" value="Enviar">
 		</form>
 	</div>
 
@@ -29,5 +30,6 @@
 </section>
 
 <div class="title" style="background-image: url('img/render3.jpg');"></div>
+
 
 <?php include 'footer.php';?>
