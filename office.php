@@ -28,7 +28,7 @@
 				<div class="tag"><p>office</p></div>
 				<div class="contain">
 					<p>Espacios corporativos  para generar las mejores ideas, cultivar relaciones estratégicas, e inspirar la realización de proyectos excepcionales. Quadra Towers conjuga
-						apariencia y funcionalidad para empresarios y ejecutivos enfocados en su negocio.</p>
+					apariencia y funcionalidad para empresarios y ejecutivos enfocados en su negocio.</p>
 				</div>
 			</div>
 		</li>

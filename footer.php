@@ -23,7 +23,7 @@
 	</div>
 </footer>
 
-<script type="text/javascript">
+<script>
 	$('.slider_arrows').unslider({
 		fluid: true,
 		delay: false,
