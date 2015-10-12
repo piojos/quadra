@@ -8,7 +8,7 @@ img {
   width: 100%;
   height: auto; }
 
-.bg_img, .slider_quotes li .wrap, .big_slider li .contain, .gmap, .halfs > div, .title {
+.bg_img, .slider_quotes li .wrap, .big_slider li .contain, .halfs > div, .title {
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
@@ -189,10 +189,9 @@ input[type="submit"] {
 /* GOOGLE MAP */
 .gmap {
   width: 100%;
-  height: 21.25em; }
-  @media (min-width: 1400px) {
-    .gmap {
-      height: 25em; } }
+  font-size: 0; }
+  .gmap a {
+    display: block; }
 
 /* HALFS */
 .halfs {
