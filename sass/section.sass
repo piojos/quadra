@@ -1,0 +1,139 @@
+header
+	+transition(all, 0.7s, ease)
+	position: fixed
+	height: 115px
+	top: 0
+	z-index: 3
+	width: 100%
+	.head
+		@extend .x_pad
+		padding-top: 2em
+		padding-bottom: 2em
+		display: table
+		position: absolute
+		z-index: 2
+		width: 100%
+		background-color: $c_white
+		.burger
+			display: table-cell
+			vertical-align: top
+			width: 1.5em
+			> div
+				+transition(all 0.4s ease)
+				background-color: $c_black
+				height: 2px
+				margin-bottom: 5px
+			> div:nth-last-child(1)
+				margin-bottom: 0
+		.logo
+			margin: 0 auto
+			max-width: 13.5em
+	.pop
+		@extend .x_pad
+		+transition(all 0.6s ease)
+		visibility: hidden
+		opacity: 0
+		margin-top: -6em
+		height: auto
+		padding-bottom: 1em
+		padding-top: 115px
+		background-color: $c_white
+		width: 100%
+		.info
+			@extend .trade_med
+			@extend .letter_spacing
+			text-transform: uppercase
+			text-align: center
+			margin: 0 auto
+		nav
+			margin-top: 6.4em
+			ul
+				text-align: center
+			li
+				@extend .letter_spacing
+				@extend .trade_med
+				padding: 0 1em
+				text-transform: uppercase
+				display: inline-block
+	@media (max-width: $med_b)
+	height: 100px
+	@media (max-width: $small_b)
+		.pop
+			padding-top: 100px
+			nav
+				margin-top: 2em
+				li
+					padding: 0.5em
+					display: block
+
+
+
+header.hide
+	+transition(all 0.6s ease)
+	top: -118px
+
+.visible
+	top: 0!important
+	z-index: 9999
+
+.target
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	transition: top .5s
+
+header.show
+	.head
+		.burger
+			div:nth-child(1)
+				+transform( rotate(45deg) )
+				position: relative
+				top: 0px
+			div:nth-child(2)
+				opacity: 0
+			div:nth-child(3)
+				+transform( rotate(-45deg) )
+				position: relative
+				top: -14px
+	.pop
+		+transition(all, 0.8s, ease)
+		margin-top: 0
+		visibility: visible
+		opacity: 1
+		padding-bottom: 3em
+		background-color: $c_white
+		height: auto
+		overflow: hidden
+
+
+
+footer
+	@extend .x_pad
+	@extend .y_pad
+	overflow: hidden
+	background-color: $c_black
+	width: 100%
+	> div
+		@extend .calibreM_small
+		@include span(3)
+		margin-top: 4em
+		margin-bottom: 4em
+		color: $c_white
+		line-height: 1.5em
+		vertical-align: top
+		a
+			display: block
+			color: $c_white
+	img
+		width: auto
+	@media (max-width: $tablet_b)
+		text-align: center
+		> div
+			@include span(12)
+			margin: 1em 0
+
+body
+	margin-top: 115px
+	@media (max-width: $med_b)
+		margin-top: 100px

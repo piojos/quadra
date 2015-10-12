@@ -1,0 +1,1 @@
+var map=new GMaps({div:"#map",lat:25.591566,lng:-100.260378,zoom:12,zoomControl:!0,zoomControlOpt:{style:"SMALL",position:"TOP_LEFT"},panControl:!1});

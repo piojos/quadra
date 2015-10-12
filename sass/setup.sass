@@ -1,0 +1,77 @@
+/*
+ *  Set up
+ */
+
+// Breaks
+$wide_b: 1400px
+$med_b: 1100px
+$tablet_b: 768px
+$small_b: 600px
+
+// Susy  Settings
+$susy: ( columns: 12, gutters: 1/2, math: fluid, output: float, gutter-position: inside, global-box-sizing: border-box)
+
+// Colors
+$c_white: #FFF
+$c_black: #000
+$c_blue: #1F4564
+$c_gray: #E4E6E9
+
+img
+	width: 100%
+	height: auto
+
+.bg_img
+	+background-size(cover)
+	background-position: center
+
+.mask
+	position: absolute
+	opacity: 0.5
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+
+.letter_spacing
+	letter-spacing: 0.05em
+
+button
+	+appearance(none)
+	+border-radius(0)
+	border: none
+	background-color: rgba(0, 0, 0, 0)
+	cursor: pointer
+	border: none
+
+input, textarea
+	+appearance(none)
+	+border-radius(0)
+	border: none
+	background-color: rgba(0, 0, 0, 0)
+
+input[type="text"], textarea
+	@extend .calibreL_small
+	width: 100%
+	display: block
+	margin-bottom: 1em
+	border: 1px solid $c_black
+	padding: 0.8em 0.5em 0.5em 0.5em
+
+input[type="submit"]
+	@extend .calibreM_small
+	border: 1px solid $c_black
+	padding: 0.8em 3em 0.5em 3em
+
+::-webkit-input-placeholder
+	color: $c_black
+
+::-moz-placeholder
+	color: $c_black
+
+.bg_gray
+	background-color: $c_gray
+.bg_white
+	background-color: $c_white
+.bg_black
+	background-color: $c_black

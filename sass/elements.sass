@@ -1,0 +1,552 @@
+
+
+
+
+/* SLIDER W/QUOTES */
+
+.slider_quotes
+	overflow: hidden
+	width: 100%
+	li
+		width: 100%
+		float: left
+		position: relative
+		.wrap
+			@extend .bg_img
+			@extend .x_pad
+			@extend .y_box_pad
+			height: 21.25em
+			width: 100%
+			display: table
+			.tag
+				+transform( rotate(-90deg) )
+				@extend .trade_med
+				text-transform: uppercase
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 6em
+				margin: auto
+				height: 3em
+				width: auto
+			.contain
+				margin: 0 auto
+				width: 100%
+				padding: 0 20%
+				display: table-cell
+				vertical-align: middle
+			ul.three_col
+				@extend .three_col
+				width: 80%
+				display: table-cell!important
+				vertical-align: middle
+				text-align: center
+				li
+					display: inline-block
+					vertical-align: top
+			ul.four_col
+				@extend .four_col_alt
+				width: 80%
+				display: table-cell
+				vertical-align: middle
+				text-align: center
+				li
+					display: inline-block
+					vertical-align: top
+					img
+						max-width: 120px
+			a.unslider-arrow
+				content: url('../img/next.svg')
+				width: 24px
+				height: 24px
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 6em
+				margin: auto
+				overflow: auto
+		@media (min-width: $wide_b)
+			.wrap
+				height: 25em
+				.contain
+					padding: 0 30%
+		@media (max-width: $med_b)
+			.wrap
+				.tag
+					left: 4em
+				a.unslider-arrow
+					right: 4em
+		@media (max-width: $tablet_b)
+			.wrap
+				.tag
+					left: 1.5em
+				a.unslider-arrow
+					right: 1.5em
+				ul.three_col
+					li
+						text-align: left
+						margin-bottom: 1em
+				ul.four_col
+					width: 100%
+		@media (max-width: $small_b)
+			.wrap
+				.tag
+					display: none
+				.contain
+					padding: 0 10%
+	li:nth-last-child(1)
+		.wrap
+			a.unslider-arrow
+				+transform( rotate(180deg) )
+				right: 6em
+
+		@media (max-width: $tablet_b)
+			.wrap
+				a.unslider-arrow
+					right: 1.5em
+
+
+
+
+/* BIG SLIDER */
+
+.big_slider
+	width: 100%
+	li
+		float: left
+		position: relative
+		.contain
+			@extend .bg_img
+			@extend .x_box_pad
+			width: 100%
+			height: 40em
+	@media (min-width: $wide_b)
+		li
+			.contain
+				height: 100vh
+	@media (max-width: $med_b)
+		li
+			.contain
+				height: 30em
+	@media (max-width: $tablet_b)
+		li
+			.contain
+				height: 15em
+
+
+
+
+/* GOOGLE MAP */
+
+.gmap
+	@extend .bg_img
+	width: 100%
+	height: 21.25em
+	@media (min-width: $wide_b)
+		height: 25em
+
+
+
+
+/* HALFS */
+
+.halfs
+	height: 21.25em
+	position: relative
+	width: 100%
+	.tag
+		+transform( rotate(-90deg) )
+		@extend .trade_med
+		text-transform: uppercase
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 6em
+		z-index: 3
+		margin: auto
+		height: 3em
+		width: auto
+	.small
+		@include span(4 inside)
+		text-align: center
+		position: relative
+		h2
+			@extend .letter_spacing
+			@extend .trade_med
+		h1
+			@extend .letter_spacing
+			@extend .trade_big
+	.big
+		@include span(8 inside)
+		position: relative
+	> div
+		@extend .bg_img
+		position: relative
+		display: table
+		height: 100%
+		.txt
+			@extend .x_box_pad
+			@extend .y_box_pad
+			width: 80%
+			display: table-cell
+			vertical-align: middle
+		img
+			width: auto
+	@media (min-width: $wide_b)
+		height: 25em
+
+	@media (max-width: $med_b)
+		.tag
+			left: 4em
+	@media (max-width: $tablet_b)
+		.tag
+			left: 1.5em
+		.small, .big
+			@include span(12)
+		> div
+			img
+				width: 100%
+		@media (max-width: $small_b)
+			.tag
+				display: none
+
+
+
+/* BIG TITLES OR BG_IMG/BLOCKS */
+
+.title
+	@extend .y_box_pad
+	@extend .x_pad
+	@extend .bg_img
+	display: table
+	height: 21.25em
+	width: 100%
+	text-align: center
+	> div
+		@extend .trade_big
+		display: table-cell
+		vertical-align: middle
+		text-transform: uppercase
+	img
+		max-width: 8em
+	@media (min-width: $wide_b)
+		height: 25em
+
+
+
+/*  FANCYBOX */
+
+#distribucion
+	position: relative
+	display: block
+	width: 100%
+	.distribucion
+		@extend .y_box_pad
+		@extend .x_pad
+		background-color: $c_gray
+		position: relative
+		width: 100%
+		overflow: hidden
+		.map
+			width: 80%
+			max-width: 900px
+			float: right	
+			.tab-content
+				display: none	
+		h1
+			@extend .trade_med
+			text-transform: uppercase
+		.open_list	
+			@extend .trade_med
+			display: none
+		.list
+			float: left
+			margin-top: 2em
+			width: 20%
+			li
+				font-size: 0.875em
+				display: block
+				padding: 0.5em 0
+				position: relative
+				a.tab
+					@extend .calibreM
+					width: auto
+				a.open
+					+transition(all ease 0.4s)
+					@extend .calibreL_small
+					opacity: 0
+					position: absolute
+					display: inline-block
+					margin-left: -0.5em
+				a.open:before
+					content: 'l'
+					margin-right: 0.5em
+				span
+					@extend .calibreL
+					margin-right: 1em
+				p
+					display: inline-block
+			li:hover
+				a.open
+					+transition(all ease 0.4s)
+					margin-left: 0.5em
+					opacity: 1
+			li.current
+				a.tab
+					color: $c_blue
+		#tab1
+			display: block
+	@media (max-width: $tablet_b)
+		.distribucion
+			.map
+				width: 100%
+			.list
+				text-align: center
+				width: 100%
+				opacity: 0
+				visibility: hidden
+				height: 0
+				padding-bottom: 1em
+			h1
+				display: none
+			.open_list
+				cursor: pointer
+				text-align: center
+				display: inline-block
+				width: 100%
+				margin-top: 1.5em
+				p
+					+transition(all ease 0.4s)
+					position: relative
+				p:after
+					+transition(all ease 0.4s)
+					content: '×'
+					opacity: 0
+					position: absolute
+					margin-left: 0
+					bottom: 0.1em
+					color: $c_black
+			.open_list.show
+				p
+					+transition(all ease 0.4s)
+					color: $c_blue
+				p:after
+					+transition(all ease 0.6s)
+					content: '×'
+					color: $c_blue
+					margin-left: 1em
+					opacity: 1
+			.list.show
+				+transition(all ease 0.6s)
+				height: auto
+				opacity: 1
+				visibility: visible
+				padding-bottom: 3em
+				
+
+
+
+/* QUICKVIEW */
+
+.lightbox
+	+transition(all ease 0.6s)
+	opacity: 0 
+	height: 0
+	visibility: hidden
+	width: 100%
+	z-index: -3
+	overflow: hidden
+	background-color: $c_white
+	position: relative
+	.close
+		width: 1.5em
+		height: 1.5em
+		float: right
+		margin-right: 6em
+		> div
+			height: 2px
+			background-color: $c_black
+		div:nth-child(1)
+			+transform( rotate(45deg) )
+			position: relative
+			top: 10px
+		div:nth-child(2)
+			+transform( rotate(-45deg) )
+			position: relative
+			top: 8px
+	@media (max-width: $wide_b)
+		.close
+			margin-right: 4em
+	@media (max-width: $tablet_b)
+		.close
+			margin-right: 1.5em
+
+
+
+
+/* LIGHTBOX SLIDER */
+
+.slider_quickview
+	width: 100%!important
+	height: 100%!important
+	> ul
+		height: 100%
+		> li
+			height: 100%
+			float: left
+			position: relative
+			.wrap
+				height: 100%
+				.contain
+					@extend .y_box_pad
+					@extend .x_pad
+					width: 100%
+					height: 100%
+					.image
+						display: block
+						max-width: 740px
+						margin: 0 auto
+					.tag
+						position: absolute
+						.level_name
+							position: relative
+							margin-top: 3em
+							p
+								+transform( rotate(-90deg) )
+								@extend .trade_med
+								position: absolute
+								text-transform: uppercase
+								vertical-align: middle
+								display: block
+								margin-left: -1em
+						.level_list
+							display: block
+							li
+								@extend .calibreM_small
+								display: block
+								margin-bottom: 0.5em
+								span
+									width: 20px
+									height: 10px
+									margin-right: 2em
+									display: inline-block
+								p
+									display: inline-block
+						.north
+							margin-top: 10em
+							img
+								width: auto
+				a.unslider-arrow
+					content: url('../img/next.svg')
+					width: 24px
+					height: 24px
+					position: absolute
+					top: 0
+					bottom: 0
+					right: 6em
+					margin: auto
+					overflow: auto
+	@media (max-width: $wide_b)
+		> ul
+			> li
+				.wrap
+					.contain
+						.image
+							max-width: 540px
+					a.unslider-arrow
+						right: 4em
+	@media (max-width: 930px)
+		> ul
+			> li
+				.wrap
+					.contain
+						.image
+							max-width: 540px
+	@media (max-width: $tablet_b)
+		> ul
+			> li
+				.wrap
+					.contain
+						.image
+							width: 100%
+						.tag	
+							position: relative
+							.level_name
+								width: 100%
+								text-align: center
+								p
+									+transform( rotate(0deg) )
+									text-transform: uppercase
+									position: inherit
+									vertical-align: middle
+									display: block
+									margin-left: 0
+							.level_list
+								display: none
+								width: 100%
+								li
+									display: inline-block
+							.north
+								display: none
+					a.unslider-arrow
+						right: 1.5em
+
+.distribucion.show
+	display: none
+
+.lightbox.show
+	+transition(all ease 0.6s)
+	opacity: 1
+	height: auto
+	z-index: 3
+	visibility: visible
+
+
+/* CONTACT */
+
+section.contact
+	padding-top: 6.25em
+	padding-bottom: 6.25em
+	overflow: hidden
+	position: relative
+	.tag
+		+transform( rotate(-90deg) )
+		@extend .trade_med
+		text-transform: uppercase
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 6em
+		margin: auto
+		height: 3em
+		width: auto
+	.form, .txt
+		@include span(6)
+		@extend .y_box_pad
+		a
+			@extend .calibreM_med
+	.form
+		form
+			width: 70%
+			float: right
+	@media (max-width: $med_b)
+		.tag
+			left: 4em
+		.form
+			form
+				width: 80%
+	@media (max-width: $tablet_b)
+		padding-top: 2em
+		padding-bottom: 2em
+		.form, .txt
+			@include span(12)
+		.form
+			form
+				width: 100%
+				float: right				
+		.tag
+			left: 1.5em
+	@media (max-width: $small_b)
+		.tag
+			display: none
+
