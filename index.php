@@ -1,9 +1,9 @@
-<?php include 'header.php';?>
+<?php
+	get_header();
 
-
-<?php include 'inc/slider.php';?>
-<?php include 'inc/slider_quotes.php';?>
-<?php include 'inc/halfs.php';?>
+	get_template_part('inc/slider');
+	get_template_part('inc/slider_quotes');
+	get_template_part('inc/halfs'); ?>
 
 <div class="slider_quotes">
 	<ul>
@@ -20,7 +20,7 @@
 	</ul>
 </div>
 
-<?php include 'inc/gmap.php';?>
+<?php get_template_part('inc/gmap'); ?>
 
 <div class="halfs">
 	<div class="big"  style="background-color: #E4E6E9;">
@@ -35,4 +35,4 @@
 </div>
 
 
-<?php include 'footer.php';?>
+<?php get_footer(); ?>

@@ -3,23 +3,25 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width" />
 	<link rel="shortcut icon" href="img/favicon.ico" />
-	<meta name="author" content="Raidho Aesthetics">
+	<meta name="author" content="Emblem Capital">
 
-	<title>Quadra</title>
+	<title><?php wp_title(); ?></title>
 
-	<link rel="stylesheet" href="css/reset.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
-	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<?php wp_head(); ?>
+
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css"/>
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/jquery.fancybox.css">
 
 	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script src="js/gmaps.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/gmaps.js"></script>
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
-	<script src="js/jquery.fancybox.pack.js"></script>
-	<script src="js/jquery.fancybox-buttons.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/jquery.fancybox.pack.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/jquery.fancybox-buttons.js"></script>
 
-	<script src="js/unslider.min.js"></script>
-	<script src="js/responsiveslides.min.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/unslider.min.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/responsiveslides.min.js"></script>
 	<script>
 		$(function() {
 			$(".list a.tab").click(function(event) {
@@ -30,7 +32,7 @@
 				$(tab).fadeIn();
 			});
 
-// Show/Hide Menu on scroll
+			// Show/Hide Menu on scroll
 			var scrollTop = $(document).scrollTop();
 			var header = $('.target').outerHeight();
 
@@ -51,7 +53,7 @@
 	</script>
 </head>
 
-<body onload="init()">
+<body onload="init()" <?php body_class(); ?>>
 	<header class="target">
 		<div class="head">
 			<a href="javascript:void(0)" class="burger">
