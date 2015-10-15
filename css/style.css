@@ -753,19 +753,19 @@ section.contact {
  */
 @font-face {
   font-family: "calibre_light";
-  src: url(/quadra/type/Calibre-Light.otf) format('opentype'); }
+  src: src("fonts/Calibre-Light.otf"); }
 @font-face {
   font-family: "calibre_medium";
-  src: url(/quadra/type/Calibre-Medium.otf) format('opentype'); }
+  src: src("fonts/Calibre-Medium.otf"); }
 @font-face {
   font-family: "calibre_semibold";
-  src: url(/quadra/type/Calibre-Semibold.otf) format('opentype'); }
+  src: src("fonts/Calibre-Semibold.otf"); }
 @font-face {
   font-family: "trade_goth";
-  src: url(/quadra/type/TradeGothicLTStd-BdCn20.otf) format('opentype'); }
+  src: src("fonts/TradeGothicLTStd-BdCn20.otf"); }
 @font-face {
   font-family: "Socicon";
-  src: url(/quadra/type/socicon.eot?1436280646) format('embedded-opentype'), url(/quadra/type/socicon.svg?1436280646) format('svg'), url(/quadra/type/socicon.ttf?1436280645) format('truetype'), url(/quadra/type/socicon.woff?1436280645) format('woff'), url(/quadra/type/socicon.woff2?1436280645) format('woff2'); }
+  src: src("fonts/socicon.eot?1436280646", "fonts/socicon.svg?1436280646", "fonts/socicon.ttf?1436280645", "fonts/socicon.woff?1436280645", "fonts/socicon.woff2?1436280645"); }
 body {
   font-family: "calibre_light", Helvetica, Arial, sans-serif;
   font-size: 18px;

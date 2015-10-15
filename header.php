@@ -9,8 +9,8 @@
 
 	<?php wp_head(); ?>
 
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/reset.css"/>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css"/>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/jquery.fancybox.css">
 
 	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -21,7 +21,6 @@
 	<script src="<?php bloginfo('template_url'); ?>/js/jquery.fancybox-buttons.js"></script>
 
 	<script src="<?php bloginfo('template_url'); ?>/js/unslider.min.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/responsiveslides.min.js"></script>
 	<script>
 		$(function() {
 			$(".list a.tab").click(function(event) {
@@ -51,9 +50,12 @@
 			});
 		});
 	</script>
+
+	<!-- Analytics -->
+
 </head>
 
-<body onload="init()" <?php body_class(); ?>>
+<body onload="init()" <?php body_class(); ?> >
 	<header class="target">
 		<div class="head">
 			<a href="javascript:void(0)" class="burger">
@@ -61,40 +63,27 @@
 			</a>
 
 			<div class="logo">
-				<a href="index.php">
-					<img src="img/logo.svg" alt="albia">
+				<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+					<img src="<?php the_field('logo', 'option'); ?>" alt="albia">
 				</a>
 			</div>
 		</div>
 
 		<div class="pop">
 			<div class="info">
-				<p>carretera nacional 5904</br>
-					monterrey, nuevo león, méxico, 64985</br>
-					t. +52 (81)1505 0000 — f. +52 (81)1505 0015
-					</br></br>
-					BY EMBLEM CAPITAL
-				</p>
-			</div>
+				<?php the_field('content', 'option'); ?>
+			</div><?php
 
+			if(have_rows('menu', 'option')): ?>
 			<nav>
-				<ul class="st-menu">
+				<ul class="st-menu"><?php
+				while(have_rows('menu', 'option')): the_row(); ?>
 					<li>
-						<a href="project.php">EL PROYECTO</a>
-					</li>
-					<li>
-						<a href="office.php">OFFICE &amp; RETAIL</a>
-					</li>
-					<li>
-						<a href="design.php">DISEÑO</a>
-					</li>
-					<li>
-						<a href="distribution.php">DISTRIBUCIÓN</a>
-					</li>
-					<li>
-						<a href="contact.php">CONTACTO</a>
-					</li>
+						<a href="<?php the_sub_field('link'); ?>" title="<?php the_sub_field('title'); ?>"><?php the_sub_field('title'); ?></a>
+					</li><?php
+				endwhile; ?>
 				</ul>
-			</nav>
+			</nav><?php
+			endif; ?>
 		</div>
 	</header>

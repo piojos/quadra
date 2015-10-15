@@ -1,25 +1,28 @@
+
+<?php wp_footer(); ?>
 <footer>
 	<div>
-		<p>Carretera Nacional, Monterrey, </br>
-		Nuevo León, México, 64895 </br></br>
+		<?php the_field('', 'option'); ?>
+	</div><?php
 
-		Quadra Towers by Emblem Capital.</br>
+	if(have_rows('menu', 'option')): ?>
+	<div><?php
+		while(have_rows('menu', 'option')): the_row(); ?>
+			<a href="<?php the_sub_field('link'); ?>" title="<?php the_sub_field('title'); ?>"><?php the_sub_field('title'); ?></a><?php
+		endwhile; ?>
+	</div><?php
+	endif;
 
-		Derechos Reservados. © 2015</p>
-	</div>
+	if(have_rows('redes', 'option')): ?>
+	<div><?php
+		while(have_rows('redes', 'option')): the_row(); ?>
+			<a href="<?php the_sub_field('link'); ?>" title="<?php the_sub_field('title'); ?>"><?php the_sub_field('title'); ?></a><?php
+		endwhile; ?>
+	</div><?php
+	endif; ?>
+
 	<div>
-		<a href="proyecto.php">El proyecto</a>
-		<a href="disponibilidad.php">Disponibilidad</a>
-		<a href="office.php">Office & Retail</a>
-		<a href="contacto">Contacto</a>
-	</div>
-	<div>
-		<a href="#">Facebook</a>
-		<a href="#">Instagram</a>
-		<a href="#">Twitter</a>
-	</div>
-	<div>
-		<img src="img/logo2.svg">
+		<img src="<?php the_field('', 'option'); ?>">
 	</div>
 </footer>
 
@@ -53,6 +56,5 @@
 	});
 </script>
 
-<?php wp_footer(); ?>
 </body>
 </html>
