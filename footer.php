@@ -2,7 +2,7 @@
 <?php wp_footer(); ?>
 <footer>
 	<div>
-		<?php the_field('', 'option'); ?>
+		<?php the_field('address', 'option'); ?>
 	</div><?php
 
 	if(have_rows('menu', 'option')): ?>
@@ -22,7 +22,7 @@
 	endif; ?>
 
 	<div>
-		<img src="<?php the_field('', 'option'); ?>">
+		<img src="<?php the_field('tiny_logo', 'option'); ?>">
 	</div>
 </footer>
 

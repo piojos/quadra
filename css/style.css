@@ -753,19 +753,19 @@ section.contact {
  */
 @font-face {
   font-family: "calibre_light";
-  src: src("fonts/Calibre-Light.otf"); }
+  src: url("../fonts/Calibre-Light.otf"); }
 @font-face {
   font-family: "calibre_medium";
-  src: src("fonts/Calibre-Medium.otf"); }
+  src: url("../fonts/Calibre-Medium.otf"); }
 @font-face {
   font-family: "calibre_semibold";
-  src: src("fonts/Calibre-Semibold.otf"); }
+  src: url("../fonts/Calibre-Semibold.otf"); }
 @font-face {
   font-family: "trade_goth";
-  src: src("fonts/TradeGothicLTStd-BdCn20.otf"); }
+  src: url("../fonts/TradeGothicLTStd-BdCn20.otf"); }
 @font-face {
   font-family: "Socicon";
-  src: src("fonts/socicon.eot?1436280646", "fonts/socicon.svg?1436280646", "fonts/socicon.ttf?1436280645", "fonts/socicon.woff?1436280645", "fonts/socicon.woff2?1436280645"); }
+  src: url("../fonts/socicon.eot?1436280646") format("embedded-opentype"), url("../fonts/socicon.svg?1436280646") format("svg"), url("../fonts/socicon.ttf?1436280645") format("truetype"), url("../fonts/socicon.woff?1436280645") format("woff"), url("../fonts/socicon.woff2?1436280645") format("woff2"); }
 body {
   font-family: "calibre_light", Helvetica, Arial, sans-serif;
   font-size: 18px;
