@@ -1,7 +1,7 @@
 <?php
 
 get_header();
-
+$bgImgID = A;
 
 while(have_rows('main_flex')): the_row();
 
@@ -12,12 +12,12 @@ while(have_rows('main_flex')): the_row();
 
 	elseif(get_row_layout() == 'info_slider'):
 
-		get_template_part('inc/B', 'slider_quotes');
+		// get_template_part('inc/B', 'slider_quotes');
 
 
 	elseif(get_row_layout() == 'halfs'):
 
-		// get_template_part('inc/C', 'halfs');
+		get_template_part('inc/C', 'halfs');
 
 
 	elseif(get_row_layout() == 'title_bg'):
