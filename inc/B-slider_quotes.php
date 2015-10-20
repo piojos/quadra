@@ -1,27 +1,42 @@
 <div class="slider_quotes slider_arrows bg_white">
-	<ul>
-		<li>
-			<div class="wrap">
-				<div class="tag"><p>by emblem capital</p></div>
-				<div class="contain">
-					<p>Quadra Towers es un desarrollo de usos mixtos que ofrece espacios exclusivos
-					de oficinas y retail diseñados por el distinguido arquitecto Alberto Vidal. El edificio contará con
-					Instalaciones de vanguardia, acompañado de un ambiente de innovación y networking al sur de la ciudad.</p>
-				</div>
-				<a href="javascript:void(0)" class="unslider-arrow next"><img src="img/next.svg"></a>
-			</div>
-		</li>
-		<li>
-			<div class="wrap">
-				<div class="tag"><p>Features</p></div>
-				<ul class="four_col">
-					<li><img src="img/funcionalidad.svg"></li>
-					<li><img src="img/modernidad.svg"></li>
-					<li><img src="img/ubicacion.svg"></li>
-					<li><img src="img/exclusividad.svg"></li>
-				</ul>
-				<a href="javascript:void(0)" class="unslider-arrow next"><img src="img/next.svg"></a>
-			</div>
-		</li>
+	<ul><?php
+
+		$n = 1;
+		while(have_rows('slider')) : the_row();
+
+			echo '<li><div class="wrap">';
+			if(get_sub_field('title')){
+				echo '<div class="tag"><p>'.get_sub_field('title').'</p></div>';
+			}
+
+			if (get_sub_field('choose') == 'content') {
+
+				if(get_sub_field('content')) {
+					echo '<div class="contain '.get_sub_field('columns').'">'.get_sub_field('content').'</div>';
+				}
+
+
+			} elseif (get_sub_field('choose') == 'icons') { ?>
+
+				<ul class="four_col"><?php
+
+					$images = get_sub_field('icons');
+					foreach( $images as $image ) {
+						echo '<li><img src="'. $image['sizes']['large'] .'"></li>';
+					} ?>
+
+				</ul><?php
+
+
+			}
+
+			if($n <= 2){
+				echo '<a href="javascript:void(0)" class="unslider-arrow next"><img src="'. get_template_directory_uri() .'/img/next.svg"></a>';
+				$n++;
+			}
+
+			echo '</div></li>';
+		endwhile; ?>
+
 	</ul>
 </div>

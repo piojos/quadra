@@ -3,11 +3,11 @@
 get_header();
 
 
-while(have_rows('')): the_row();
+while(have_rows('main_flex')): the_row();
 
 	if(get_row_layout() == 'img_slider'):
 
-		get_template_part('inc/A', 'slider');
+		// get_template_part('inc/A', 'slider');
 
 
 	elseif(get_row_layout() == 'info_slider'):
@@ -17,22 +17,22 @@ while(have_rows('')): the_row();
 
 	elseif(get_row_layout() == 'halfs'):
 
-		get_template_part('inc/C', 'halfs');
+		// get_template_part('inc/C', 'halfs');
 
 
 	elseif(get_row_layout() == 'title_bg'):
 
-		get_template_part('inc/D', 'title');
+		// get_template_part('inc/D', 'title');
 
 
 	elseif(get_row_layout() == 'contact'):
 
-		get_template_part('inc/E', 'contact');
+		// get_template_part('inc/E', 'contact');
 
 
 	elseif(get_row_layout() == 'distribution'):
 
-		get_template_part('inc/F', 'distribution');
+		// get_template_part('inc/F', 'distribution');
 
 
 	endif;
