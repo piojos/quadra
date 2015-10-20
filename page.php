@@ -17,12 +17,12 @@ while(have_rows('main_flex')): the_row();
 
 	elseif(get_row_layout() == 'halfs'):
 
-		get_template_part('inc/C', 'halfs');
+		// get_template_part('inc/C', 'halfs');
 
 
 	elseif(get_row_layout() == 'title_bg'):
 
-		// get_template_part('inc/D', 'title');
+		get_template_part('inc/D', 'title');
 
 
 	elseif(get_row_layout() == 'contact'):
