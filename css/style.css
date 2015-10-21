@@ -50,7 +50,7 @@ input, textarea {
 input[type="text"], input[type="email"], textarea {
   width: 100%;
   display: block;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   border: 1px solid #000;
   padding: 0.8em 0.5em 0.5em 0.5em; }
 
@@ -569,6 +569,8 @@ section.contact {
   section.contact .form form {
     width: 70%;
     float: right; }
+  section.contact .form img {
+    width: initial; }
   @media (max-width: 1100px) {
     section.contact .tag {
       left: 4em; }
@@ -591,6 +593,26 @@ section.contact {
   @media (max-width: 600px) {
     section.contact .tag {
       display: none; } }
+
+div.wpcf7-validation-errors {
+  border: none;
+  background: #F3D214; }
+
+div.wpcf7-response-output {
+  padding: 0.75em 1em 0.5em;
+  margin: 1em 0;
+  text-align: center; }
+
+div.wpcf7-mail-sent-ok {
+  border: none;
+  background: #98E078; }
+
+span.wpcf7-not-valid-tip {
+  font-size: 0.8em; }
+
+span.wpcf7-form-control-wrap {
+  margin-bottom: 1em;
+  display: block; }
 
 .x_pad, .slider_quotes li .wrap, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, section, footer, header .head, header .pop {
   padding-left: 5em;

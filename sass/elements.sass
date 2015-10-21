@@ -497,7 +497,6 @@
 
 
 
-
 /* CONTACT */
 
 section.contact
@@ -525,6 +524,8 @@ section.contact
 		form
 			width: 70%
 			float: right
+		img
+			width: initial
 	@media (max-width: $med_b)
 		.tag
 			left: 4em
@@ -545,3 +546,24 @@ section.contact
 	@media (max-width: $small_b)
 		.tag
 			display: none
+
+
+div.wpcf7-validation-errors
+	border: none
+	background: #F3D214
+
+div.wpcf7-response-output
+	padding: .75em 1em .5em
+	margin: 1em 0
+	text-align: center
+
+div.wpcf7-mail-sent-ok
+	border: none
+	background: #98E078
+
+span.wpcf7-not-valid-tip
+	font-size: .8em
+
+span.wpcf7-form-control-wrap
+	margin-bottom: 1em
+	display: block
