@@ -1,25 +1,18 @@
 <?php
 
-	if(get_sub_field('choose') == 'img'){
-		$singleImg = get_sub_field('img');
-	} else {
+	if(get_sub_field('choose') == 'sld') :
+
 		$images = get_sub_field('gallery');
-	} ?>
-
-<hr>
-<br>
-
-<div class="big_slider">
-	<ul><?php
 		$A = 'A';
+
+		echo '<div class="big_slider"><ul>';
 		foreach( $images as $img ): ?>
 			<li><?php
-
-					$img_med = $img['sizes']['medium'];
-					$img_large = $img['sizes']['large'];
-					$img_larger = $img['sizes']['larger'];
-					$img_largest = $img['sizes']['largest'];
-					$img_huge = $img['url'];
+				$img_med = $img['sizes']['medium'];
+				$img_large = $img['sizes']['large'];
+				$img_larger = $img['sizes']['larger'];
+				$img_largest = $img['sizes']['largest'];
+				$img_huge = $img['url'];
 
 				if($img){
 					echo '<div id="ftd_img_'. $A .'" class="contain">';
@@ -34,16 +27,26 @@
 				} ?>
 			</li><?php
 		endforeach;
-		if($singleImg){ ?>
-			<picture>
-				<img class="full_width_image"
-					 src="<?php echo $image['sizes']['larger']; ?>"
-					 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
-					 alt="<?php echo $image['alt']; ?>" />
-			</picture><?php
-		} ?>
-	</ul>
-</div>
+		echo '</ul></div>';
 
-<br>
-<hr>
+
+	elseif(get_sub_field('choose') == 'img') :
+
+		echo '<div class="gmap">';
+			$image = get_sub_field('img');
+			if(get_sub_field('link')) {
+				echo '<a href="'.get_sub_field('link').'" target="_blank">';
+			} ?>
+				<picture>
+					<img class="full_width_image"
+						 src="<?php echo $image['sizes']['larger']; ?>"
+						 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+						 alt="<?php echo $image['alt']; ?>" />
+				</picture><?php
+			if(get_sub_field('link')) {
+				echo '</a>';
+			}
+		echo '</div>';
+
+
+	endif; ?>
