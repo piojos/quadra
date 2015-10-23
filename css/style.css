@@ -594,6 +594,112 @@ section.contact {
     section.contact .tag {
       display: none; } }
 
+/* LISTED ELEMENTS */
+.listed_elements {
+  position: relative; }
+  .listed_elements .tag {
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 6em;
+    margin: auto;
+    z-index: 3;
+    height: 3em; }
+    .listed_elements .tag p {
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      margin-left: -4em;
+      text-align: center;
+      width: 12.5em; }
+  .listed_elements .content {
+    position: relative;
+    min-height: 24em;
+    width: 100%;
+    margin: 0 auto;
+    display: table; }
+    .listed_elements .content .column {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+      padding: 0 30%;
+      text-align: center;
+      -webkit-column-count: 2;
+      column-count: 2; }
+      .listed_elements .content .column li {
+        text-align: left;
+        line-height: 1.75em; }
+      .listed_elements .content .column span {
+        margin-right: 1em; }
+  .listed_elements .map {
+    width: 80%;
+    max-width: 1070px;
+    margin: 0 auto;
+    position: relative; }
+    .listed_elements .map .tab-content {
+      display: none; }
+      .listed_elements .map .tab-content a {
+        width: 100%; }
+  .listed_elements .map img {
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 1; }
+  .listed_elements .map:hover img {
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 0.2; }
+  .listed_elements .map:after {
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .listed_elements .map:hover:after {
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 1.25em;
+    content: "VER PLANTA";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; }
+  .listed_elements #tab1 {
+    display: block; }
+  @media (max-width: 1400px) {
+    .listed_elements .map {
+      max-width: 900px; } }
+  @media (max-width: 1100px) {
+    .listed_elements .tag {
+      left: 4em; } }
+  @media (max-width: 768px) {
+    .listed_elements .tag {
+      left: 1.5em; }
+    .listed_elements .content {
+      min-height: 20em; }
+      .listed_elements .content .column {
+        width: 90%;
+        padding: 0 0 0 1em; }
+    .listed_elements .map {
+      width: 100%; } }
+  @media (max-width: 600px) {
+    .listed_elements .tag {
+      display: none; }
+    .listed_elements .map:hover img {
+      opacity: 1; }
+    .listed_elements .map:hover:after {
+      display: none; } }
+
 div.wpcf7-validation-errors {
   border: none;
   background: #F3D214; }
@@ -614,23 +720,23 @@ span.wpcf7-form-control-wrap {
   margin-bottom: 1em;
   display: block; }
 
-.x_pad, .slider_quotes li .wrap, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, section, footer, header .head, header .pop {
+.x_pad, .slider_quotes li .wrap, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, .listed_elements .content, section, footer, header .head, header .pop {
   padding-left: 5em;
   padding-right: 5em; }
   @media (min-width: 1400px) {
-    .x_pad, .slider_quotes li .wrap, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, section, footer, header .head, header .pop {
+    .x_pad, .slider_quotes li .wrap, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, .listed_elements .content, section, footer, header .head, header .pop {
       padding-left: 6em;
       padding-right: 6em; } }
   @media (max-width: 1100px) {
-    .x_pad, .slider_quotes li .wrap, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, section, footer, header .head, header .pop {
+    .x_pad, .slider_quotes li .wrap, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, .listed_elements .content, section, footer, header .head, header .pop {
       padding-left: 5em;
       padding-right: 5em; } }
   @media (max-width: 768px) {
-    .x_pad, .slider_quotes li .wrap, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, section, footer, header .head, header .pop {
+    .x_pad, .slider_quotes li .wrap, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, .listed_elements .content, section, footer, header .head, header .pop {
       padding-left: 4em;
       padding-right: 4em; } }
   @media (max-width: 600px) {
-    .x_pad, .slider_quotes li .wrap, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, section, footer, header .head, header .pop {
+    .x_pad, .slider_quotes li .wrap, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, .listed_elements .content, section, footer, header .head, header .pop {
       padding-left: 1.5em;
       padding-right: 1.5em; } }
 
@@ -660,15 +766,15 @@ span.wpcf7-form-control-wrap {
       padding-left: 1em;
       padding-right: 1em; } }
 
-.y_box_pad, .slider_quotes li .wrap, .halfs > div .txt, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, section.contact .form, section.contact .txt, section, footer {
+.y_box_pad, .slider_quotes li .wrap, .halfs > div .txt, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, section.contact .form, section.contact .txt, .listed_elements .content, section, footer {
   padding-top: 2.5em;
   padding-bottom: 2.5em; }
   @media (min-width: 1100px) {
-    .y_box_pad, .slider_quotes li .wrap, .halfs > div .txt, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, section.contact .form, section.contact .txt, section, footer {
+    .y_box_pad, .slider_quotes li .wrap, .halfs > div .txt, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, section.contact .form, section.contact .txt, .listed_elements .content, section, footer {
       padding-top: 3em;
       padding-bottom: 3em; } }
   @media (max-width: 768px) {
-    .y_box_pad, .slider_quotes li .wrap, .halfs > div .txt, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, section.contact .form, section.contact .txt, section, footer {
+    .y_box_pad, .slider_quotes li .wrap, .halfs > div .txt, .title, #distribucion .distribucion, .slider_quickview > ul > li .wrap .contain, section.contact .form, section.contact .txt, .listed_elements .content, section, footer {
       padding-top: 2em;
       padding-bottom: 2em; } }
 
@@ -813,10 +919,10 @@ body {
   font-family: "calibre_medium";
   font-size: 1.125em; }
 
-.calibreM, #distribucion .distribucion .list li a.tab {
+.calibreM, #distribucion .distribucion .list li a.tab, .listed_elements .content .column li, .listed_elements .content .column p, .listed_elements .map:hover:after {
   font-family: "calibre_medium"; }
 
-.calibreL, #distribucion .distribucion .list li span {
+.calibreL, #distribucion .distribucion .list li span, .listed_elements .content .column span {
   font-family: "calibre_light"; }
 
 .trade {
@@ -827,7 +933,7 @@ body {
   font-family: "trade_goth";
   font-size: 0.875em; }
 
-.trade_med, .slider_quotes li .wrap .tag, .halfs .tag, .halfs .small h2, #distribucion .distribucion h1, #distribucion .distribucion .open_list, .slider_quickview > ul > li .wrap .contain .tag .level_name p, section.contact .tag, header .pop .info, header .pop nav li {
+.trade_med, .slider_quotes li .wrap .tag, .halfs .tag, .halfs .small h2, #distribucion .distribucion h1, #distribucion .distribucion .open_list, .slider_quickview > ul > li .wrap .contain .tag .level_name p, section.contact .tag, .listed_elements .tag, header .pop .info, header .pop nav li {
   font-family: "trade_goth";
   font-size: 1.25em; }
 

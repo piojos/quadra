@@ -1,0 +1,37 @@
+.title.tile {
+	background-size: initial;
+}
+.contain p strong {
+	font-family: calibre_medium, sans-serif;
+}
+
+.slider_quotes li .wrap .contain {
+	font-size: 1.15em;
+}
+
+.slider_quotes ol li {
+	font-family: 'calibre_medium', sans-serif;
+}
+.slider_quotes ol {
+	list-style-type: none;
+	margin-left: 0;
+}
+
+.slider_quotes ol > li {
+	counter-increment: customlistcounter;
+}
+
+.slider_quotes ol > li:before {
+	content:  "0" counter(customlistcounter);
+	font-family: 'calibre_light', sans-serif;
+	float: left;
+	width: 1.75em;
+}
+
+.slider_quotes ol > li:nth-child(1n+10):before {
+	content: counter(customlistcounter);
+}
+
+.slider_quotes ol:first-child {
+	counter-reset: customlistcounter;
+}

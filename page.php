@@ -12,17 +12,17 @@ while(have_rows('main_flex')): the_row();
 
 	elseif(get_row_layout() == 'info_slider'):
 
-		// get_template_part('inc/B', 'slider_quotes');
+		get_template_part('inc/B', 'slider_quotes');
 
 
 	elseif(get_row_layout() == 'halfs'):
 
-		// get_template_part('inc/C', 'halfs');
+		get_template_part('inc/C', 'halfs');
 
 
 	elseif(get_row_layout() == 'title_bg'):
 
-		// get_template_part('inc/D', 'title');
+		get_template_part('inc/D', 'title');
 
 
 	elseif(get_row_layout() == 'contact'):
@@ -32,7 +32,7 @@ while(have_rows('main_flex')): the_row();
 
 	elseif(get_row_layout() == 'distribution'):
 
-		// get_template_part('inc/F', 'distribution');
+		get_template_part('inc/F', 'distribution');
 
 
 	endif;

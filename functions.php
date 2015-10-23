@@ -98,8 +98,48 @@
 
 
 
+//  Change Posts => Plantas
+
+	function revcon_change_post_label() {
+		global $menu;
+		global $submenu;
+		$menu[5][0] = 'Plantas';
+		$submenu['edit.php'][5][0] = 'Plantas';
+		$submenu['edit.php'][10][0] = 'Nueva Planta';
+		$submenu['edit.php'][16][0] = '';
+		echo '';
+	}
+	function revcon_change_post_object() {
+		global $wp_post_types;
+		$labels = &$wp_post_types['post']->labels;
+		$labels->name = 'Plantas';
+		$labels->singular_name = 'Planta';
+		$labels->add_new = 'Nueva';
+		$labels->add_new_item = 'Nueva Planta';
+		$labels->edit_item = 'Editar Planta';
+		$labels->new_item = 'Nuevo';
+		$labels->view_item = 'Ver Planta';
+		$labels->search_items = 'Buscar Plantas';
+		$labels->not_found = 'No existen Plantas';
+		$labels->not_found_in_trash = 'No existen Plantas en la basura';
+		$labels->all_items = 'Todas las Plantas';
+		$labels->menu_name = 'Plantas';
+		$labels->name_admin_bar = 'Plantas';
+	}
+
+	add_action( 'admin_menu', 'revcon_change_post_label' );
+	add_action( 'init', 'revcon_change_post_object' );
+
+	// Unregister tags from Plantas (Native Post)
+	function unregister_taxonomy(){
+		register_taxonomy('post_tag', array());
+		register_taxonomy('category', array());
+	}
+	add_action('init', 'unregister_taxonomy');
+
+
 // Hide Posts & usuals in Editor level Admin
-/*
+
 	function hide_menu() {
 		global $current_user;
 		$user_id = get_current_user_id();
@@ -122,7 +162,7 @@
 		}
 	}
 	add_action('admin_head', 'hide_menu');
-*/
+
 
 
 

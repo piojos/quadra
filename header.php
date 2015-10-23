@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/reset.css"/>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/shame.css"/>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/jquery.fancybox.css">
 
 	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>

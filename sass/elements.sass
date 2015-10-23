@@ -548,6 +548,112 @@ section.contact
 			display: none
 
 
+
+/* LISTED ELEMENTS */
+
+.listed_elements
+	position: relative
+	.tag
+		@extend .trade_med
+		text-transform: uppercase
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 6em
+		margin: auto
+		z-index: 3
+		height: 3em
+		p
+			+transform( rotate(-90deg) )
+			margin-left: -4em
+			text-align: center
+			width: 12.5em
+	.content
+		@extend .y_box_pad
+		@extend .x_pad
+		position: relative
+		min-height: 24em
+		width: 100%
+		margin: 0 auto
+		display: table
+		.column
+			display: table-cell
+			vertical-align: middle
+			width: 100%
+			padding: 0 30%
+			text-align: center
+			-webkit-column-count: 2
+			column-count: 2
+			li
+				text-align: left
+				line-height: 1.75em
+				@extend .calibreM
+			p
+				@extend .calibreM
+			span
+				@extend .calibreL
+				margin-right: 1em
+	.map
+		width: 80%
+		max-width: 1070px
+		margin: 0 auto
+		position: relative
+		.tab-content
+			display: none
+			a
+				width: 100%
+	.map
+		img
+			+transition(all ease 0.3s)
+			opacity: 1
+	.map:hover
+		img
+			+transition(all ease 0.3s)
+			opacity: 0.2
+	.map:after
+		+transition(all ease 0.3s)
+	.map:hover:after
+		+transition(all ease 0.3s)
+		@extend .calibreM
+		font-size: 1.25em
+		content: 'VER PLANTA'
+		position: absolute
+		z-index: -1
+		top: 50%
+		left: 0
+		right: 0
+		width: 100%
+		text-align: center
+		margin: 0 auto
+	#tab1
+		display: block
+	@media (max-width: $wide_b)
+		.map
+			max-width: 900px
+	@media (max-width: $med_b)
+		.tag
+			left: 4em
+	@media (max-width: $tablet_b)
+		.tag
+			left: 1.5em
+		.content
+			min-height: 20em
+			.column
+				width: 90%
+				padding: 0 0 0 1em
+		.map
+			width: 100%
+	@media (max-width: $small_b)
+		.tag
+			display: none
+		.map:hover
+			img
+				opacity: 1
+		.map:hover:after
+			display: none
+
+
+
 div.wpcf7-validation-errors
 	border: none
 	background: #F3D214

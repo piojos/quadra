@@ -1,4 +1,4 @@
-<div class="title" <?php
+<div class="title <?php the_sub_field('options'); ?>" <?php
 
 	$img = get_sub_field('bg_img');
 	$titImgID = A;
