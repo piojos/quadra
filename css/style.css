@@ -23,7 +23,7 @@ img {
   top: 0;
   left: 0; }
 
-.letter_spacing, .halfs .small h2, .halfs .small h1, header .pop .info, header .pop nav li {
+.letter_spacing, .halfs h2, .halfs h1, header .pop .info, header .pop nav li {
   letter-spacing: 0.05em; }
 
 button {
@@ -933,11 +933,11 @@ body {
   font-family: "trade_goth";
   font-size: 0.875em; }
 
-.trade_med, .slider_quotes li .wrap .tag, .halfs .tag, .halfs .small h2, #distribucion .distribucion h1, #distribucion .distribucion .open_list, .slider_quickview > ul > li .wrap .contain .tag .level_name p, section.contact .tag, .listed_elements .tag, header .pop .info, header .pop nav li {
+.trade_med, .slider_quotes li .wrap .tag, .halfs .tag, .halfs h2, #distribucion .distribucion h1, #distribucion .distribucion .open_list, .slider_quickview > ul > li .wrap .contain .tag .level_name p, section.contact .tag, .listed_elements .tag, header .pop .info, header .pop nav li {
   font-family: "trade_goth";
   font-size: 1.25em; }
 
-.trade_big, .halfs .small h1, .title > div {
+.trade_big, .halfs h1, .title > div {
   font-family: "trade_goth";
   font-size: 3em; }
 

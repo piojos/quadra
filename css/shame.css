@@ -35,3 +35,23 @@
 .slider_quotes ol:first-child {
 	counter-reset: customlistcounter;
 }
+.slider_quotes li .wrap .contain.col2 ol {
+	-webkit-columns: 2;
+	-moz-columns: 2;
+	columns: 2;
+	-webkit-column-gap: 2em;
+	-moz-column-gap: 2em;
+	column-gap: 2em;
+}
+.slider_quotes li .wrap .contain.col3 ol {
+	-webkit-columns: 3;
+	-moz-columns: 3;
+	columns: 3;
+	-webkit-column-gap: 2em;
+	-moz-column-gap: 2em;
+	column-gap: 2em;
+}
+.slider_quotes li .wrap .contain.col2,
+.slider_quotes li .wrap .contain.col3 {
+	padding: 0 20% !important;
+}

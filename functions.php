@@ -167,3 +167,59 @@
 
 
 // Edit wysiwyg editor
+
+	/* 	Editar styleselect  */
+	function my_mce_before_init_insert_formats( $init_array ) {
+
+		$style_formats = array(
+			array(
+				'title' => 'Título',
+				'block' => 'h1',
+				'classes' => 'heading'
+			),
+			array(
+				'title' => 'Subtítulo',
+				'block' => 'h2',
+				'classes' => 'heading'
+			),
+			array(
+				'title' => 'Parrafo',
+				'block' => 'p',
+				'classes' => 'heading'
+			)
+		);
+
+		$init_array['style_formats'] = json_encode( $style_formats );
+		return $init_array;
+	}
+
+	add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
+
+
+	/*	Colors  */
+	function my_mce4_new_colors( $init ) {
+		$default_colours = '';
+		$custom_colours = '
+			"e4e6e9", "Gris", "1f4564", "Azul", "fcfcfc", "Blanco", "000000", "Negro"
+		';
+		$init['textcolor_map'] = '['.$custom_colours.','.$default_colours.']';
+		return $init;
+	}
+
+	add_filter('tiny_mce_before_init', 'my_mce4_new_colors');
+
+
+	/*	ACF - WYSIWYG  */
+	add_filter( 'acf/fields/wysiwyg/toolbars' , 'my_toolbars'  );
+	function my_toolbars( $toolbars ) {
+
+		$toolbars['Normal' ] = array();
+		$toolbars['Normal' ][1] = array('styleselect' , 'forecolor' , 'bold' , 'alignleft aligncenter' , 'bullist' , 'numlist' , 'link' , 'unlink' , 'removeformat');
+
+		// remove the 'Full' toolbar completely
+		unset( $toolbars['Full' ] );
+		// unset( $toolbars['Basic' ] );
+
+		// return $toolbars - IMPORTANT!
+		return $toolbars;
+	}
