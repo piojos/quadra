@@ -42,6 +42,18 @@
 		speed: 900
 	});
 
+	$('.slider_arrows').each(function(){
+		var $slider = $(this).unslider();
+		$(this).find('.unslider-arrow').click(function(event){
+			event.preventDefault();
+			if ($(this).hasClass('next')) {
+				$slider.data('unslider')['next']();
+				} else {
+				$slider.data('unslider')['prev']();
+			};
+		});
+	});
+	
 	jQuery(document).ready(function($) {
 		var mq = window.matchMedia( "(max-width: 600px)" );
 
