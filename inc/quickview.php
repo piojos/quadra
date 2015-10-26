@@ -1,161 +1,65 @@
-<div class="lightbox" id="lightbox">
-	<a href="javascript:void(0)" class="close"><div></div><div></div></a>
-	<div class="slider_quickview slider_arrows">
-	    <ul>
-			<li>
-				<div class="wrap">
-					<a href="#" class="unslider-arrow prev"></a>
-					<div class="contain">
-						<div class="tag">
-							<div class="level_list">
-								<ul>
-									<li><span style="background-color: #1F4564;"></span><p>Locales</p></li>
-									<li><span style="background-color: #336FA8;"></span><p>Oficinas</p></li>
-									<li><span style="background-color: #6B90B2;"></span><p>Área Común</p></li>
-									<li><span style="background-color: #7B7E82;"></span><p>Estacionamiento al aire libre</p></li>
-									<li><span style="background-color: #BDBDBD;"></span><p>Estacionamiento</p></li>
-								</ul>
-							</div>
+<?php
 
-							<div class="level_name"><p>NIVEL 01</p></div>
+$n = 1;
+while(have_rows('levels')) : the_row();
+
+	$post_object = get_sub_field('sel_post');
+	if( $post_object ):
+
+		$post = $post_object;
+		setup_postdata( $post );
+		$image = get_field('img_areas'); ?>
+
+		<div class="lightbox" id="modal<?php echo $n++; ?>">
+			<button class="prev_btn" onclick="$.fancybox.prev(true)"/><img src="<?php bloginfo('template_url'); ?>/img/next.svg"></button>
+			<a href="javascript:void(0)" onclick="$.fancybox.close(true)" class="close"><div></div><div></div></a>
+			<div class="quickview">
+				<div class="wrap">
+					<div class="contain">
+						<div class="tag"><?php
+
+							if(get_field('areas')) :
+								echo '<div class="level_list"><ul>';
+								while (have_rows('areas')) : the_row();
+									echo '<li><span style="background-color: '.get_sub_field('color').';"></span><p>'.get_sub_field('title').'</p></li>';
+								endwhile;
+								echo '</ul></div>';
+							endif; ?>
+
+							<div class="level_name"><p><?php the_title(); ?></p></div>
 
 							<div class="north">
-								<img src="img/north.svg" alt="quadra">
+								<img src="<?php bloginfo('template_url'); ?>/img/north.svg" alt="quadra">
 							</div>
 						</div>
 
 						<div class="image">
-							<img src="img/n22.jpg">
+							<picture>
+								<img class="full_width_image"
+									 src="<?php echo $image['sizes']['larger']; ?>"
+									 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+									 alt="<?php echo $image['alt']; ?>" />
+							</picture>
 						</div>
 					</div>
-					<a href="javascript:void(0)" class="unslider-arrow next"><img src="img/next.svg"></a>
+					<button class="next_btn" onclick="$.fancybox.next(true)"/><img src="<?php bloginfo('template_url'); ?>/img/next.svg"></button>
 				</div>
-			</li>
-			<li>
-				<div class="wrap">
-					<a href="#" class="unslider-arrow prev"></a>
-					<div class="contain">
-						<div class="tag">
-							<div class="level_list">
-								<ul>
-									<li><span style="background-color: #1F4564;"></span><p>Locales</p></li>
-									<li><span style="background-color: #336FA8;"></span><p>Oficinas</p></li>
-									<li><span style="background-color: #6B90B2;"></span><p>Área Común</p></li>
-									<li><span style="background-color: #7B7E82;"></span><p>Estacionamiento al aire libre</p></li>
-									<li><span style="background-color: #BDBDBD;"></span><p>Estacionamiento</p></li>
-								</ul>
-							</div>
+			</div>
+		</div><?php
 
-							<div class="level_name"><p>NIVEL 02</p></div>
+		wp_reset_postdata();
+	endif;
 
-							<div class="north">
-								<img src="img/north.svg" alt="quadra">
-							</div>
-						</div>
+endwhile; ?>
 
-						<div class="image">
-							<img src="img/n22.jpg">
-						</div>
-					</div>
-					<a href="javascript:void(0)" class="unslider-arrow next"><img src="img/next.svg"></a>
-				</div>
-			</li>
-			<li>
-				<div class="wrap">
-					<a href="#" class="unslider-arrow prev"></a>
-					<div class="contain">
-						<div class="tag">
-							<div class="level_list">
-								<ul>
-									<li><span style="background-color: #1F4564;"></span><p>Locales</p></li>
-									<li><span style="background-color: #336FA8;"></span><p>Oficinas</p></li>
-									<li><span style="background-color: #6B90B2;"></span><p>Área Común</p></li>
-									<li><span style="background-color: #7B7E82;"></span><p>Estacionamiento al aire libre</p></li>
-									<li><span style="background-color: #BDBDBD;"></span><p>Estacionamiento</p></li>
-								</ul>
-							</div>
 
-							<div class="level_name"><p>NIVEL 03</p></div>
 
-							<div class="north">
-								<img src="img/north.svg" alt="quadra">
-							</div>
-						</div>
-
-						<div class="image">
-							<img src="img/n22.jpg">
-						</div>
-					</div>
-					<a href="javascript:void(0)" class="unslider-arrow next"><img src="img/next.svg"></a>
-				</div>
-			</li>
-			<li>
-				<div class="wrap">
-					<a href="#" class="unslider-arrow prev"></a>
-					<div class="contain">
-						<div class="tag">
-							<div class="level_list">
-								<ul>
-									<li><span style="background-color: #1F4564;"></span><p>Locales</p></li>
-									<li><span style="background-color: #336FA8;"></span><p>Oficinas</p></li>
-									<li><span style="background-color: #6B90B2;"></span><p>Área Común</p></li>
-									<li><span style="background-color: #7B7E82;"></span><p>Estacionamiento al aire libre</p></li>
-									<li><span style="background-color: #BDBDBD;"></span><p>Estacionamiento</p></li>
-								</ul>
-							</div>
-
-							<div class="level_name"><p>NIVEL 04</p></div>
-
-							<div class="north">
-								<img src="img/north.svg" alt="quadra">
-							</div>
-						</div>
-
-						<div class="image">
-							<img src="img/n22.jpg">
-						</div>
-					</div>
-					<a href="javascript:void(0)" class="unslider-arrow next"><img src="img/next.svg"></a>
-				</div>
-			</li>
-			<li>
-				<div class="wrap">
-					<a href="#" class="unslider-arrow prev"></a>
-					<div class="contain">
-						<div class="tag">
-							<div class="level_list">
-								<ul>
-									<li><span style="background-color: #1F4564;"></span><p>Locales</p></li>
-									<li><span style="background-color: #336FA8;"></span><p>Oficinas</p></li>
-									<li><span style="background-color: #6B90B2;"></span><p>Área Común</p></li>
-									<li><span style="background-color: #7B7E82;"></span><p>Estacionamiento al aire libre</p></li>
-									<li><span style="background-color: #BDBDBD;"></span><p>Estacionamiento</p></li>
-								</ul>
-							</div>
-
-							<div class="level_name"><p>NIVEL 05</p></div>
-
-							<div class="north">
-								<img src="img/north.svg" alt="quadra">
-							</div>
-						</div>
-
-						<div class="image">
-							<img src="img/n22.jpg">
-						</div>
-					</div>
-					<a href="javascript:void(0)" class="unslider-arrow next"><img src="img/next.svg"></a>
-				</div>
-			</li>
-	    </ul>
-	</div>
-</div>
 
 <script type="text/javascript">
 	$( "a.open" ).click(function() {
-		$( ".lightbox, .distribucion" ).toggleClass( "show" );          
+		$( ".lightbox, .distribucion" ).toggleClass( "show" );
 	});
 	$( "a.close" ).click(function() {
-		$( ".lightbox, .distribucion" ).toggleClass( "show" );          
+		$( ".lightbox, .distribucion" ).toggleClass( "show" );
 	});
 </script>

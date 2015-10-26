@@ -42,14 +42,26 @@
 		speed: 900
 	});
 
-	// var unslider = $('.slider_arrows').unslider();
+	jQuery(document).ready(function($) {
+		var mq = window.matchMedia( "(max-width: 600px)" );
 
-	// $('.unslider-arrow').click(function() {
-	// 	var fn = this.className.split(' ')[1];
-	//
-	// 	//  Either do unslider.data('unslider').next() or .prev() depending on the className
-	// 	unslider.data('unslider')[fn]();
-	// });
+		if (mq.matches) {
+			$('.content .map .tab-content > a').removeClass('fancybox');
+
+			$('.column li a').removeClass('tab');
+
+			$(document).on('click', 'a[href^=#]', function(event) {
+	  			event.preventDefault();
+			});
+		}
+
+		else{
+			$(".column li .tab").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+			});
+		}
+	});
 
 	$( "a.burger" ).click(function() {
 		$( "header" ).toggleClass( "show" );
