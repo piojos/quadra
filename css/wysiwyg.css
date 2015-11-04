@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+body {
+	font-family: helvetica, arial, sans-serif;
+}
+h1, h2 {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+a {
+	text-decoration: none;
+}
+span a {
+	text-decoration: inherit;
+}
