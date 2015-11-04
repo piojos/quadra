@@ -725,6 +725,26 @@ span.wpcf7-form-control-wrap {
   margin-bottom: 1em;
   display: block; }
 
+/* IMAGE GALLERY */
+.galeria {
+  font-size: 0; }
+  .galeria figure {
+    font-size: 16px;
+    vertical-align: top;
+    display: inline-block; }
+  .galeria figure:nth-child(3n+1) {
+    padding: 1% 1% 1% 0;
+    width: 50%; }
+  .galeria figure:nth-child(3n+2) {
+    padding: 1% 0 1% 1%; }
+  .galeria figure:nth-child(3n+3) {
+    width: 100%;
+    padding: 1% 0; }
+  @media (max-width: 600px) {
+    .galeria figure:nth-child(3n+2), .galeria figure:nth-child(3n+2), .galeria figure:nth-child(3n+3) {
+      width: 100%;
+      padding: 1% 0; } }
+
 .x_pad, .slider_quotes li .wrap, .title, #distribucion .distribucion, .quickview .wrap .contain, .listed_elements .content, section, footer, header .head, header .pop {
   padding-left: 5em;
   padding-right: 5em; }

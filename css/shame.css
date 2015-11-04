@@ -11,7 +11,8 @@
 
 .slider_quotes ol li {
 	font-family: 'calibre_medium', sans-serif;
-	font-size: .75em;
+	font-size: 14px;
+	line-height: 1.75em; 
 }
 .slider_quotes ol {
 	list-style-type: none;
