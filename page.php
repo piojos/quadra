@@ -2,6 +2,7 @@
 
 get_header();
 $bgImgID = A;
+$titImgID = A;
 
 while(have_rows('main_flex')): the_row();
 
@@ -35,6 +36,9 @@ while(have_rows('main_flex')): the_row();
 		get_template_part('inc/F', 'distribution');
 
 
+	elseif(get_row_layout() == 'galeria'):
+
+		get_template_part('inc/G', 'galeria');
 	endif;
 
 endwhile;
