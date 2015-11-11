@@ -198,7 +198,8 @@ input[type="submit"] {
 .halfs {
   height: 21.25em;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 1px; }
   .halfs .tag {
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
