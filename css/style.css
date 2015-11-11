@@ -939,7 +939,7 @@ body {
   font-family: "trade_goth";
   font-size: 0.875em; }
 
-.trade_med, .slider_quotes li .wrap .tag, .halfs .tag, .halfs h2, #distribucion .distribucion h1, #distribucion .distribucion .open_list, .quickview .wrap .contain .tag .level_name p, section.contact .tag, .listed_elements .tag, header .pop .info, header .pop nav li {
+.trade_med, .slider_quotes li .wrap .tag, .halfs .tag, .halfs h2, #distribucion .distribucion h1, #distribucion .distribucion .open_list, .quickview .wrap .contain .tag .level_name p, section.contact .tag, .listed_elements .tag {
   font-family: "trade_goth";
   font-size: 1.25em; }
 
@@ -982,7 +982,9 @@ header {
         margin-bottom: 0; }
     header .head .logo {
       margin: 0 auto;
-      max-width: 13.5em; }
+      max-width: 200px; }
+      header .head .logo a {
+        width: 100%; }
   header .pop {
     -moz-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
@@ -997,6 +999,8 @@ header {
     background-color: #FFF;
     width: 100%; }
     header .pop .info {
+      font-family: "trade_goth";
+      font-size: 16px;
       text-transform: uppercase;
       text-align: center;
       margin: 0 auto; }
@@ -1005,6 +1009,8 @@ header {
       header .pop nav ul {
         text-align: center; }
       header .pop nav li {
+        font-family: "trade_goth";
+        font-size: 20px;
         padding: 0 1em;
         text-transform: uppercase;
         display: inline-block; }
