@@ -1151,7 +1151,8 @@ footer {
       display: block;
       color: #FFF; }
   footer img {
-    width: auto; }
+    width: auto;
+    float: left; }
   @media (max-width: 768px) {
     footer {
       text-align: center; }
