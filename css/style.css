@@ -1069,6 +1069,7 @@ header {
     header .pop .info {
       font-family: "trade_goth";
       font-size: 16px;
+      padding-left: 1.5em;
       text-transform: uppercase;
       text-align: center;
       margin: 0 auto; }
@@ -1085,6 +1086,8 @@ header {
   @media (max-width: 600px) {
     header .pop {
       padding-top: 100px; }
+      header .pop .info {
+        padding-left: 0; }
       header .pop nav {
         margin-top: 2em; }
         header .pop nav li {
@@ -1166,7 +1169,7 @@ footer {
     footer > div a {
       display: block;
       color: #FFF;
-      margin-bottom: 16px; }
+      margin-bottom: 12px; }
   footer img {
     width: auto;
     float: left; }
