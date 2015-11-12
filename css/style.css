@@ -287,13 +287,18 @@ input[type="submit"] {
     vertical-align: middle;
     text-transform: uppercase; }
   .title img {
-    width: auto; }
+    width: auto;
+    margin: 140px 0; }
   @media (min-width: 1400px) {
     .title {
       height: 25em; } }
+  @media (max-width: 1100px) {
+    .title img {
+      margin: 70px 0; } }
   @media (max-width: 600px) {
     .title img {
-      width: 90%; } }
+      width: 90%;
+      margin: 20px 0; } }
 
 /*  FANCYBOX */
 #distribucion {
