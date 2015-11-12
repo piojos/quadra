@@ -230,6 +230,12 @@ input[type="submit"] {
     padding-right: 1.38889%;
     text-align: center;
     position: relative; }
+  .halfs h2 {
+    font-family: "trade_goth";
+    font-size: 20px; }
+  .halfs h1 {
+    font-family: "trade_goth";
+    font-size: 48px; }
   .halfs .big {
     width: 66.66667%;
     float: left;
@@ -981,11 +987,11 @@ body {
   font-family: "trade_goth";
   font-size: 0.875em; }
 
-.trade_med, .halfs h2, #distribucion .distribucion h1, #distribucion .distribucion .open_list, .quickview .wrap .contain .tag .level_name p {
+.trade_med, #distribucion .distribucion h1, #distribucion .distribucion .open_list, .quickview .wrap .contain .tag .level_name p {
   font-family: "trade_goth";
   font-size: 1.25em; }
 
-.trade_big, .halfs h1, .title > div {
+.trade_big, .title > div {
   font-family: "trade_goth";
   font-size: 3em; }
 
