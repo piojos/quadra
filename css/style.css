@@ -971,7 +971,7 @@ body {
   font-family: "calibre_light";
   font-size: 1.125em; }
 
-.calibreM_small, input[type="submit"], .quickview .wrap .contain .tag .level_list li, footer > div {
+.calibreM_small, input[type="submit"], .quickview .wrap .contain .tag .level_list li {
   font-family: "calibre_medium";
   font-size: 0.875em; }
 
@@ -1142,14 +1142,17 @@ footer {
     float: left;
     padding-left: 1.38889%;
     padding-right: 1.38889%;
+    font-family: "calibre_medium";
+    font-size: 14px;
+    line-height: normal;
     margin-top: 4em;
     margin-bottom: 4em;
     color: #FFF;
-    line-height: 1.5em;
     vertical-align: top; }
     footer > div a {
       display: block;
-      color: #FFF; }
+      color: #FFF;
+      margin-bottom: 10px; }
   footer img {
     width: auto;
     float: left; }
