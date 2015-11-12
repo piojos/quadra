@@ -1073,6 +1073,8 @@ header {
       text-transform: uppercase;
       text-align: center;
       margin: 0 auto; }
+      header .pop .info p:nth-last-child(1) {
+        margin-top: 20px; }
     header .pop nav {
       margin-top: 6.4em; }
       header .pop nav ul {
