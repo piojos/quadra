@@ -86,6 +86,9 @@ input[type="submit"] {
       height: 21.25em;
       width: 100%;
       display: table; }
+      .slider_quotes li .wrap p {
+        font-size: 18px;
+        line-height: 24px; }
       .slider_quotes li .wrap .tag {
         -moz-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
