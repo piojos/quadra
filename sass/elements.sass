@@ -205,14 +205,14 @@
 	@media (max-width: $med_b)
 		.tag
 			left: 4em
+		> div img
+			width: 100%
+			max-width: 350px
 	@media (max-width: $tablet_b)
 		.tag
 			left: 1.5em
 		.small, .big
 			@include span(12)
-		> div
-			img
-				width: 100%
 		@media (max-width: $small_b)
 			.tag
 				display: none
