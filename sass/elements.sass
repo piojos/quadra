@@ -233,9 +233,12 @@
 		vertical-align: middle
 		text-transform: uppercase
 	img
-		max-width: 8em
+		width: auto
 	@media (min-width: $wide_b)
 		height: 25em
+	@media (max-width: $small_b)
+		img
+			width: 90%
 
 
 

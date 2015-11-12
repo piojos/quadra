@@ -280,10 +280,13 @@ input[type="submit"] {
     vertical-align: middle;
     text-transform: uppercase; }
   .title img {
-    max-width: 8em; }
+    width: auto; }
   @media (min-width: 1400px) {
     .title {
       height: 25em; } }
+  @media (max-width: 600px) {
+    .title img {
+      width: 90%; } }
 
 /*  FANCYBOX */
 #distribucion {
