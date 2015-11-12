@@ -1,0 +1,135 @@
+.title.tile {
+	background-size: initial;
+}
+.contain p strong,
+.txt strong {
+	font-family: calibre_medium, sans-serif;
+}
+
+.slider_quotes li .wrap .contain{
+	text-align: justify;
+	line-height: 1.3em;
+}
+
+.slider_quotes li .wrap .contain,
+.halfs > div .txt {
+	font-size: 1.15em;
+}
+
+.slider_quotes ol li {
+	font-family: 'calibre_medium', sans-serif;
+	font-size: 14px;
+	line-height: 2em;
+}
+.slider_quotes ol {
+	list-style-type: none;
+	margin-left: 0;
+}
+
+.slider_quotes ol > li {
+	counter-increment: customlistcounter;
+}
+
+.slider_quotes ol > li:before {
+	content:  "0" counter(customlistcounter);
+	font-family: 'calibre_light', sans-serif;
+	float: left;
+	width: 1.75em;
+}
+
+.slider_quotes ol > li:nth-child(1n+10):before {
+	content: counter(customlistcounter);
+}
+
+.slider_quotes ol:first-child {
+	counter-reset: customlistcounter;
+}
+.slider_quotes li .wrap .contain.col2 ol {
+	-webkit-columns: 2;
+	-moz-columns: 2;
+	columns: 2;
+	-webkit-column-gap: 2em;
+	-moz-column-gap: 2em;
+	column-gap: 2em;
+}
+.slider_quotes li .wrap .contain.col3 ol {
+	-webkit-columns: 3;
+	-moz-columns: 3;
+	columns: 3;
+	-webkit-column-gap: 2em;
+	-moz-column-gap: 2em;
+	column-gap: 2em;
+}
+@media(max-width:1100px){
+	.slider_quotes li .wrap .contain.col3 ol {
+		-webkit-columns: 2;
+		-moz-columns: 2;
+		columns: 2;
+		-webkit-column-gap: 2em;
+		-moz-column-gap: 2em;
+		column-gap: 2em;
+	}
+}
+
+.slider_quotes li .wrap .contain.col2,
+.slider_quotes li .wrap .contain.col3 {
+	padding: 0 20% !important;
+}
+.wImg {
+	font-size: 0;
+}
+.wImg.title img {
+	max-width: 30% !important;
+	margin: 60px 0;
+}
+
+.txt a {
+	text-decoration: inherit;
+}
+
+.halfs .small h2 {
+	font-size: 1.65em;
+}
+
+@media(min-width:768px){
+	footer > div:last-child {
+	text-align: right;
+		width: 13.5%;
+	}
+
+	footer > div:nth-child(1) {
+		width: 50%;
+	}
+
+	footer > div:nth-child(2),
+	footer > div:nth-child(3) {
+		width: 18.25%;
+	}
+}
+
+
+/* IMAGE GALLERY */
+.galeria {
+  font-size: 0; }
+  .galeria figure {
+    font-size: 16px;
+    vertical-align: top;
+    display: inline-block; }
+  .galeria figure:nth-child(3n+1) {
+    padding: 1% 1% 1% 0;
+    width: 50%; }
+  .galeria figure:nth-child(3n+2) {
+  	width: 50%;
+    padding: 1% 0 1% 1%; }
+  .galeria figure:nth-child(3n+3) {
+    width: 100%;
+    padding: 1% 0; }
+  @media (max-width: 600px) {
+    .galeria figure:nth-child(3n+1), .galeria figure:nth-child(3n+2), .galeria figure:nth-child(3n+3) {
+      width: 100%;
+      padding: 1% 0; } }
+
+@media (max-width: 900px){
+.halfs > div img {
+    width: 80%!important;
+}
