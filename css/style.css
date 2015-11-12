@@ -208,6 +208,9 @@ input[type="submit"] {
     -ms-transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
+    font-family: "trade_goth";
+    font-size: 20px;
+    letter-spacing: 50px;
     text-transform: uppercase;
     position: absolute;
     top: 0;
@@ -238,6 +241,9 @@ input[type="submit"] {
       width: 80%;
       display: table-cell;
       vertical-align: middle; }
+      .halfs > div .txt p {
+        font-size: 18px;
+        line-height: 24px; }
     .halfs > div img {
       width: auto; }
   @media (min-width: 1400px) {
@@ -963,7 +969,7 @@ body {
   font-family: "trade_goth";
   font-size: 0.875em; }
 
-.trade_med, .slider_quotes li .wrap .tag, .halfs .tag, .halfs h2, #distribucion .distribucion h1, #distribucion .distribucion .open_list, .quickview .wrap .contain .tag .level_name p, section.contact .tag, .listed_elements .tag {
+.trade_med, .slider_quotes li .wrap .tag, .halfs h2, #distribucion .distribucion h1, #distribucion .distribucion .open_list, .quickview .wrap .contain .tag .level_name p, section.contact .tag, .listed_elements .tag {
   font-family: "trade_goth";
   font-size: 1.25em; }
 
