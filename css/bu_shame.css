@@ -1,24 +1,18 @@
 .title.tile {
 	background-size: initial;
 }
-.contain p strong,
-.txt strong {
+.contain p strong {
 	font-family: calibre_medium, sans-serif;
 }
 
-.slider_quotes li .wrap .contain{
-	line-height: 1.3em;
-}
-
-.slider_quotes li .wrap .contain,
-.halfs > div .txt {
+.slider_quotes li .wrap .contain {
 	font-size: 1.15em;
 }
 
 .slider_quotes ol li {
 	font-family: 'calibre_medium', sans-serif;
 	font-size: 14px;
-	line-height: 2em;
+	line-height: 1.75em; 
 }
 .slider_quotes ol {
 	list-style-type: none;
@@ -74,41 +68,6 @@
 .slider_quotes li .wrap .contain.col3 {
 	padding: 0 20% !important;
 }
-.wImg {
+.halfs .txt.wImg {
 	font-size: 0;
-}
-.wImg.title img {
-/*	width: auto;
-	margin: 140px 0;
-	max-width: 30% !important;
-	margin: 60px 0;*/
-}
-
-.txt a {
-	text-decoration: inherit;
-}
-
-.halfs .small h2 {
-	font-size: 1.65em;
-}
-
-@media(min-width:768px){
-	footer > div:last-child {
-	text-align: right;
-		width: 13.5%;
-	}
-
-	footer > div:nth-child(1) {
-		width: 50%;
-	}
-
-	footer > div:nth-child(2),
-	footer > div:nth-child(3) {
-		width: 18.25%;
-	}
-}
-
-@media (max-width: 900px){
-.halfs > div img {
-    width: 80%!important;
 }

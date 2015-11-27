@@ -214,7 +214,7 @@
 	function my_toolbars( $toolbars ) {
 
 		$toolbars['Normal' ] = array();
-		$toolbars['Normal' ][1] = array('styleselect' , 'forecolor' , 'bold', 'underline', 'alignleft aligncenter' , 'bullist' , 'numlist' , 'link' , 'unlink' , 'removeformat');
+		$toolbars['Normal' ][1] = array('styleselect' , 'forecolor' , 'bold', 'underline', 'alignleft aligncenter' , 'alignjustify' , 'bullist' , 'numlist' , 'link' , 'unlink' , 'removeformat');
 
 		// remove the 'Full' toolbar completely
 		unset( $toolbars['Full' ] );

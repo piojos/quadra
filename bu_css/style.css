@@ -23,7 +23,7 @@ img {
   top: 0;
   left: 0; }
 
-.letter_spacing, .halfs h2, .halfs h1, .halfs .big h2, header .pop .info, header .pop nav li {
+.letter_spacing, .halfs h2, .halfs h1, header .pop .info, header .pop nav li {
   letter-spacing: 0.05em; }
 
 button {
@@ -48,8 +48,6 @@ input, textarea {
   max-width: 100%; }
 
 input[type="text"], input[type="email"], textarea {
-  font-family: "calibre_light";
-  font-size: 14px;
   width: 100%;
   display: block;
   margin-bottom: 0.5em;
@@ -57,8 +55,6 @@ input[type="text"], input[type="email"], textarea {
   padding: 0.8em 0.5em 0.5em 0.5em; }
 
 input[type="submit"] {
-  font-family: "calibre_medium";
-  font-size: 14px;
   border: 1px solid #000;
   padding: 0.8em 3em 0.5em 3em; }
 
@@ -90,17 +86,11 @@ input[type="submit"] {
       height: 21.25em;
       width: 100%;
       display: table; }
-      .slider_quotes li .wrap p {
-        font-size: 18px;
-        line-height: 24px; }
       .slider_quotes li .wrap .tag {
         -moz-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
         -webkit-transform: rotate(-90deg);
         transform: rotate(-90deg);
-        font-family: "trade_goth";
-        font-size: 20px;
-        letter-spacing: 1px;
         text-transform: uppercase;
         position: absolute;
         top: 0;
@@ -124,7 +114,7 @@ input[type="submit"] {
           display: inline-block;
           vertical-align: top; }
       .slider_quotes li .wrap ul.four_col {
-        width: 90%;
+        width: 80%;
         display: table-cell;
         vertical-align: middle;
         text-align: center; }
@@ -208,16 +198,12 @@ input[type="submit"] {
 .halfs {
   height: 21.25em;
   position: relative;
-  width: 100%;
-  margin-bottom: -1px; }
+  width: 100%; }
   .halfs .tag {
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    font-family: "trade_goth";
-    font-size: 20px;
-    letter-spacing: 1px;
     text-transform: uppercase;
     position: absolute;
     top: 0;
@@ -234,22 +220,12 @@ input[type="submit"] {
     padding-right: 1.38889%;
     text-align: center;
     position: relative; }
-  .halfs h2 {
-    font-family: "trade_goth";
-    font-size: 20px; }
-  .halfs h1 {
-    font-family: "trade_goth";
-    font-size: 48px; }
   .halfs .big {
     width: 66.66667%;
     float: left;
     padding-left: 1.38889%;
     padding-right: 1.38889%;
     position: relative; }
-    .halfs .big h2 {
-      font-family: "trade_goth";
-      font-size: 16px;
-      line-height: 20px; }
   .halfs > div {
     position: relative;
     display: table;
@@ -258,9 +234,6 @@ input[type="submit"] {
       width: 80%;
       display: table-cell;
       vertical-align: middle; }
-      .halfs > div .txt p {
-        font-size: 18px;
-        line-height: 24px; }
     .halfs > div img {
       width: auto; }
   @media (min-width: 1400px) {
@@ -268,10 +241,7 @@ input[type="submit"] {
       height: 25em; } }
   @media (max-width: 1100px) {
     .halfs .tag {
-      left: 4em; }
-    .halfs > div img {
-      width: 100%;
-      max-width: 350px; } }
+      left: 4em; } }
   @media (max-width: 768px) {
     .halfs .tag {
       left: 1.5em; }
@@ -279,7 +249,9 @@ input[type="submit"] {
       width: 100%;
       float: left;
       padding-left: 1.38889%;
-      padding-right: 1.38889%; } }
+      padding-right: 1.38889%; }
+    .halfs > div img {
+      width: 100%; } }
 @media (max-width: 768px) and (max-width: 600px) {
   .halfs .tag {
     display: none; } }
@@ -295,18 +267,10 @@ input[type="submit"] {
     vertical-align: middle;
     text-transform: uppercase; }
   .title img {
-    width: auto;
-    margin: 140px 0; }
+    max-width: 8em; }
   @media (min-width: 1400px) {
     .title {
       height: 25em; } }
-  @media (max-width: 1100px) {
-    .title img {
-      margin: 70px 0; } }
-  @media (max-width: 600px) {
-    .title img {
-      width: 80%;
-      margin: 50px 0; } }
 
 /*  FANCYBOX */
 #distribucion {
@@ -594,9 +558,6 @@ section.contact {
     -ms-transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    font-family: "trade_goth";
-    font-size: 20px;
-    letter-spacing: 1px;
     text-transform: uppercase;
     position: absolute;
     top: 0;
@@ -610,12 +571,6 @@ section.contact {
     float: left;
     padding-left: 1.38889%;
     padding-right: 1.38889%; }
-    section.contact .form a, section.contact .txt a {
-      font-family: "calibre_medium"; }
-  section.contact .txt {
-    font-family: "calibre_light";
-    font-size: 18px;
-    line-height: 24px; }
   section.contact .form form {
     width: 70%;
     float: right; }
@@ -648,9 +603,6 @@ section.contact {
 .listed_elements {
   position: relative; }
   .listed_elements .tag {
-    font-family: "trade_goth";
-    font-size: 20px;
-    letter-spacing: 1px;
     text-transform: uppercase;
     position: absolute;
     top: 0;
@@ -772,27 +724,6 @@ span.wpcf7-not-valid-tip {
 span.wpcf7-form-control-wrap {
   margin-bottom: 1em;
   display: block; }
-
-/* NUEVA GALERIA */
-.galeria {
-  font-size: 0; }
-  .galeria figure {
-    font-size: 16px;
-    vertical-align: top;
-    display: inline-block; }
-  .galeria figure:nth-child(3n+1) {
-    padding: 1% 1% 1% 0;
-    width: 50%; }
-  .galeria figure:nth-child(3n+2) {
-    width: 50%;
-    padding: 1% 0 1% 1%; }
-  .galeria figure:nth-child(3n+3) {
-    width: 100%;
-    padding: 1% 0; }
-  @media (max-width: 600px) {
-    .galeria figure:nth-child(3n+1), .galeria figure:nth-child(3n+2), .galeria figure:nth-child(3n+3) {
-      width: 100%;
-      padding: 1% 0; } }
 
 .x_pad, .slider_quotes li .wrap, .title, #distribucion .distribucion, .quickview .wrap .contain, .listed_elements .content, section, footer, header .head, header .pop {
   padding-left: 5em;
@@ -977,7 +908,7 @@ body {
     body {
       font-size: 14px; } }
 
-.calibreL_small, #distribucion .distribucion .list li a.open {
+.calibreL_small, input[type="text"], input[type="email"], textarea, #distribucion .distribucion .list li a.open {
   font-family: "calibre_light";
   font-size: 0.875em; }
 
@@ -985,11 +916,11 @@ body {
   font-family: "calibre_light";
   font-size: 1.125em; }
 
-.calibreM_small, .quickview .wrap .contain .tag .level_list li {
+.calibreM_small, input[type="submit"], .quickview .wrap .contain .tag .level_list li, footer > div {
   font-family: "calibre_medium";
   font-size: 0.875em; }
 
-.calibreM_med {
+.calibreM_med, section.contact .form a, section.contact .txt a {
   font-family: "calibre_medium";
   font-size: 1.125em; }
 
@@ -1007,11 +938,11 @@ body {
   font-family: "trade_goth";
   font-size: 0.875em; }
 
-.trade_med, #distribucion .distribucion h1, #distribucion .distribucion .open_list, .quickview .wrap .contain .tag .level_name p {
+.trade_med, .slider_quotes li .wrap .tag, .halfs .tag, .halfs h2, #distribucion .distribucion h1, #distribucion .distribucion .open_list, .quickview .wrap .contain .tag .level_name p, section.contact .tag, .listed_elements .tag, header .pop .info, header .pop nav li {
   font-family: "trade_goth";
   font-size: 1.25em; }
 
-.trade_big, .title > div {
+.trade_big, .halfs h1, .title > div {
   font-family: "trade_goth";
   font-size: 3em; }
 
@@ -1050,9 +981,7 @@ header {
         margin-bottom: 0; }
     header .head .logo {
       margin: 0 auto;
-      max-width: 200px; }
-      header .head .logo a {
-        width: 100%; }
+      max-width: 13.5em; }
   header .pop {
     -moz-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
@@ -1067,31 +996,20 @@ header {
     background-color: #FFF;
     width: 100%; }
     header .pop .info {
-      font-family: "trade_goth";
-      font-size: 16px;
-      padding-left: 1.5em;
       text-transform: uppercase;
       text-align: center;
       margin: 0 auto; }
-      header .pop .info p span {
-        font-size: 10px;
-        vertical-align: top;
-        display: inline-block; }
     header .pop nav {
       margin-top: 6.4em; }
       header .pop nav ul {
         text-align: center; }
       header .pop nav li {
-        font-family: "trade_goth";
-        font-size: 20px;
         padding: 0 1em;
         text-transform: uppercase;
         display: inline-block; }
   @media (max-width: 600px) {
     header .pop {
       padding-top: 100px; }
-      header .pop .info {
-        padding-left: 0; }
       header .pop nav {
         margin-top: 2em; }
         header .pop nav li {
@@ -1163,20 +1081,16 @@ footer {
     float: left;
     padding-left: 1.38889%;
     padding-right: 1.38889%;
-    font-family: "calibre_medium";
-    font-size: 14px;
-    line-height: normal;
     margin-top: 4em;
     margin-bottom: 4em;
     color: #FFF;
+    line-height: 1.5em;
     vertical-align: top; }
     footer > div a {
       display: block;
-      color: #FFF;
-      margin-bottom: 12px; }
+      color: #FFF; }
   footer img {
-    width: auto;
-    float: left; }
+    width: auto; }
   @media (max-width: 768px) {
     footer {
       text-align: center; }

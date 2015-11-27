@@ -14,9 +14,14 @@
 			height: 21.25em
 			width: 100%
 			display: table
+			p
+				font-size: 18px
+				line-height: 24px
 			.tag
 				+transform( rotate(-90deg) )
-				@extend .trade_med
+				font-family: 'trade_goth'
+				font-size: 20px
+				letter-spacing: 1px
 				text-transform: uppercase
 				position: absolute
 				top: 0
@@ -42,7 +47,7 @@
 					vertical-align: top
 			ul.four_col
 				@extend .four_col_alt
-				width: 80%
+				width: 90%
 				display: table-cell
 				vertical-align: middle
 				text-align: center
@@ -148,9 +153,12 @@
 	height: 21.25em
 	position: relative
 	width: 100%
+	margin-bottom: -1px
 	.tag
 		+transform( rotate(-90deg) )
-		@extend .trade_med
+		font-family: 'trade_goth'
+		font-size: 20px
+		letter-spacing: 1px
 		text-transform: uppercase
 		position: absolute
 		top: 0
@@ -166,13 +174,20 @@
 		position: relative
 	h2
 		@extend .letter_spacing
-		@extend .trade_med
+		font-family: 'trade_goth'
+		font-size: 20px
 	h1
 		@extend .letter_spacing
-		@extend .trade_big
+		font-family: 'trade_goth'
+		font-size: 48px
 	.big
 		@include span(8 inside)
 		position: relative
+		h2
+			@extend .letter_spacing
+			font-family: 'trade_goth'
+			font-size: 16px
+			line-height: 20px
 	> div
 		@extend .bg_img
 		position: relative
@@ -184,6 +199,9 @@
 			width: 80%
 			display: table-cell
 			vertical-align: middle
+			p
+				font-size: 18px
+				line-height: 24px
 		img
 			width: auto
 	@media (min-width: $wide_b)
@@ -192,14 +210,14 @@
 	@media (max-width: $med_b)
 		.tag
 			left: 4em
+		> div img
+			width: 100%
+			max-width: 350px
 	@media (max-width: $tablet_b)
 		.tag
 			left: 1.5em
 		.small, .big
 			@include span(12)
-		> div
-			img
-				width: 100%
 		@media (max-width: $small_b)
 			.tag
 				display: none
@@ -222,9 +240,17 @@
 		vertical-align: middle
 		text-transform: uppercase
 	img
-		max-width: 8em
+		width: auto
+		margin: 140px 0
 	@media (min-width: $wide_b)
 		height: 25em
+	@media (max-width: $med_b)
+		img
+			margin: 70px 0
+	@media (max-width: $small_b)
+		img
+			width: 80%
+			margin: 50px 0
 
 
 
@@ -502,7 +528,9 @@ section.contact
 	position: relative
 	.tag
 		+transform( rotate(-90deg) )
-		@extend .trade_med
+		font-family: 'trade_goth'
+		font-size: 20px
+		letter-spacing: 1px
 		text-transform: uppercase
 		position: absolute
 		top: 0
@@ -515,7 +543,11 @@ section.contact
 		@include span(6)
 		@extend .y_box_pad
 		a
-			@extend .calibreM_med
+			font-family: "calibre_medium"
+	.txt
+		font-family: "calibre_light"
+		font-size: 18px
+		line-height: 24px
 	.form
 		form
 			width: 70%
@@ -550,7 +582,9 @@ section.contact
 .listed_elements
 	position: relative
 	.tag
-		@extend .trade_med
+		font-family: 'trade_goth'
+		font-size: 20px
+		letter-spacing: 1px
 		text-transform: uppercase
 		position: absolute
 		top: 0
@@ -669,3 +703,26 @@ span.wpcf7-not-valid-tip
 span.wpcf7-form-control-wrap
 	margin-bottom: 1em
 	display: block
+
+
+
+/* NUEVA GALERIA */
+.galeria
+	font-size: 0
+	figure
+		font-size: 16px
+		vertical-align: top
+		display: inline-block
+	figure:nth-child(3n+1)
+		padding: 1% 1% 1% 0
+		width: 50%
+	figure:nth-child(3n+2)
+		width: 50%
+		padding: 1% 0 1% 1%
+	figure:nth-child(3n+3)
+		width: 100%
+		padding: 1% 0
+	@media (max-width: 600px)
+		figure:nth-child(3n+1), figure:nth-child(3n+2), figure:nth-child(3n+3)
+			width: 100%
+			padding: 1% 0
